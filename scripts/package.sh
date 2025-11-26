@@ -63,6 +63,7 @@ function build::jam(){
 
   pushd "${ROOT_DIR}" > /dev/null || return
     for os in darwin linux windows; do
+       #fors390x
        for arch in amd64 arm64 s390x; do
         if [[ "${arch}" == "s390x" ]] && [[ "${os}" != "linux" ]] ; then
             continue
